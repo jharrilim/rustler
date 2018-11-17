@@ -2,11 +2,15 @@ use std::io::prelude::{
     Read,
     Write
 };
+
 use std::net::{
     TcpListener,
-    TcpStream
+    TcpStream,
 };
+
 use std::fs::File;
+
+mod http;
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
